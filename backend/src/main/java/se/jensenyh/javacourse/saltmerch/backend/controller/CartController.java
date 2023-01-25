@@ -11,7 +11,7 @@ import se.jensenyh.javacourse.saltmerch.backend.service.CartService;
 
 @CrossOrigin(origins = "http://localhost:3010")
 @RestController
-@RequestMapping("/carts")
+@RequestMapping("/api/v1/carts")
 public class CartController {
 
     @Autowired
