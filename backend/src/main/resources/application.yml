@@ -1,7 +1,9 @@
-Spring:
+spring:
   datasource:
-    name: database
-    platform: postgres
-    url: jdbc:postgresql://database:5432/database
+    url: jdbc:postgresql://database:5432/saltmerch
     username: jensenyh
     password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
