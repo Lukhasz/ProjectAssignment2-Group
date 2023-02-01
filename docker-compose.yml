@@ -24,16 +24,16 @@ services:
   backend:
     image: tomcat:tag:11.0.0-M1-jdk17
     ports:
-      - 8099:8080
+      - "8099:8080"
     volumes:
-      - ./webapps:/usr/local/tomcat/webapps 
+      - ./webapps:/usr/local/tomcat/webapps  
       - m2repo:/root/.m2/repository
     restart: unless-stopped
   jenkins:
     image: jenkins/jenkins:tag:jdk17
     ports:
-      -  8050:8080
-      -  8050:50000
+      -  "8050:8080"
+      -  "50000:50000"
     volumes:
       -  jenkins_home:/var/jenkins_home
       -  ./webapps:/artifacts
