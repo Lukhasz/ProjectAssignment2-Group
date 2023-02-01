@@ -39,10 +39,9 @@ services:
       -  ./webapps:/artifacts
     restart: unless-stopped
 volumes:
- m2repo:
-  name: m2repo
-   nodemodules:
-   name: nodemodules
-    jenkins_home:
+  m2repo:
+    name: m2repo
+  nodemodules:
+    name: nodemodules
+  jenkins_home:
     name: jenkins_home
-
