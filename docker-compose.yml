@@ -29,7 +29,7 @@ services:
       - ./webapps:/usr/local/tomcat/webapps 
       - m2repo:/root/.m2/repository
     restart: unless-stopped
- jenkins:
+  jenkins:
     image: jenkins/jenkins:tag:jdk17
     ports:
       -  8050:8080
