@@ -22,7 +22,7 @@ services:
       - "5432:5432"
     restart: unless-stopped
   backend:
-    image: tomcat:tag:11.0.0-M1-jdk17
+    image: tomcat:11.0.0-M1-jdk17
     ports:
       - "8099:8080"
     volumes:
