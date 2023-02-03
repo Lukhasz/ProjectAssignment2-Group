@@ -37,7 +37,6 @@ pipeline {
                  echo 'packaged'
                     }
                 }
-
         
         stage ('deploy'){
             steps {
@@ -51,7 +50,7 @@ pipeline {
 	post {
         always {
             echo 'generating test report....'
-            junit 'target/*reports/**/*.xml'
+            junit '**/*reports/**/*.xml'
             echo 'test report generated'
         }
     }
