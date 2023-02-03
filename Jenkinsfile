@@ -41,17 +41,18 @@ pipeline {
                }
 
         post {
-          always {
+             always {
                 echo 'generating test report....'
                 junit 'target/*reports/**/*.xml'
                 echo 'test report generated'
                 }
             }
 
-         stage ('deploy'){
-               steps {
+        stage ('deploy'){
+            steps {
                dir('./backend'){
                sh 'cp ./target/ROOT.war /artifacts'
-                 }
-                  }
-                  }
+                }
+            }
+        }
+}
