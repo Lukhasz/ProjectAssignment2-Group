@@ -32,11 +32,11 @@ pipeline {
 
         stage('package') {
             steps {
-                 echo 'packaging...'
-                 sh 'mvn war:war -f backend'
-                 echo 'packaged'
-                    }
-                }
+                echo 'packaging...'
+                sh 'mvn war:war -f backend'
+                echo 'packaged'
+            }
+        }
         
         stage ('deploy'){
             steps {
