@@ -54,3 +54,4 @@ pipeline {
                sh 'cp ./target/ROOT.war /artifacts'
                  }
                   }
+                  }
