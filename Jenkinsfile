@@ -38,7 +38,6 @@ pipeline {
                  echo 'packaged'
                     }
                 }
-               }
 
         post {
              always {
@@ -50,9 +49,9 @@ pipeline {
 
         stage ('deploy'){
             steps {
-               dir('./backend'){
+               dir('./backend')
                sh 'cp ./target/ROOT.war /artifacts'
-                }
+                
             }
         }
 }
